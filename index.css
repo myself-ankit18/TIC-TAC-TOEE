@@ -1,21 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 
 }
-.game{
+
+.game {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
-.container{
+
+.container {
     display: grid;
     grid-template-rows: repeat(3, 11vw);
     grid-template-columns: repeat(3, 11vw);
     position: relative;
 }
-.box{
+
+.box {
     border: 2px solid black;
     font-size: 6vw;
     cursor: pointer;
@@ -23,18 +26,21 @@
     justify-content: center;
     align-items: center;
 }
-.box:hover{
+
+.box:hover {
     background-color: rgb(242, 234, 250);
 
 
 }
-#restartGame:hover{
+
+#restartGame:hover {
     filter: invert(1);
 }
-.end{
+
+.end {
     margin: auto;
     height: 130px;
-    width: 170px; 
+    width: 170px;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -42,35 +48,42 @@
     align-items: center;
     gap: 14px
 }
-#restartGame{
+
+#restartGame {
     height: 30px;
     width: fit-content;
     padding: 0 10px;
     border-radius: 2px;
-    font-size:clamp(14px,3vw,19px);
+    font-size: clamp(14px, 3vw, 19px);
     cursor: pointer;
     font-weight: 500;
     border: 0;
 }
-.left-border{
+
+.left-border {
     border-left: 0;
 }
-.right-border{
+
+.right-border {
     border-right: 0;
 }
-.top-border{
+
+.top-border {
     border-top: 0;
 }
-.bottom-border{
+
+.bottom-border {
     border-bottom: 0;
 }
-.check{
-    font-size:clamp(14px,3vw,19px);
+
+.check {
+    font-size: clamp(14px, 3vw, 19px);
     font-weight: bold;
-    
+
 }
-@media screen and (max-width:575px){
-    .container{
+
+@media screen and (max-width:575px) {
+    .container {
         display: grid;
         grid-template-rows: repeat(3, 18vw);
         grid-template-columns: repeat(3, 18vw);
