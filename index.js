@@ -2,10 +2,10 @@ let winnn = new Audio("winnn.mp3")
 let draw = new Audio("draw.mp3")
 let start = new Audio("start.mp3")
 let tap = new Audio("tap.mp3")
+start.play();
 
 let gameover = false
 let turn = "X"
-start.play();
 
 const changeTurn = () => {
     return turn === "X" ? "O" : "X"
