@@ -22,7 +22,6 @@ const checkForWin = () => {
     ]
     wins.forEach((e) => {
         if ((text[e[0]].innerText === text[e[1]].innerText) && (text[e[2]].innerText === text[e[1]].innerText) && (text[e[0]].innerText !== "")) {
-            // document.body.style.backgroundColor="#00000092";
             document.querySelector('.check').innerText = text[e[0]].innerText + " Wins"
             winnn.play();
             gameover = true
@@ -41,7 +40,6 @@ const checkForTie = () => {
 
     if (filledBoxes === texts.length && !gameover) {
         document.querySelector('.check').innerText = "It's a Tie!";
-        // document.body.style.backgroundColor="#00000092";
 
         draw.play();
         gameover = true;
@@ -53,7 +51,7 @@ Array.from(boxes).forEach(element => {
     let text = element.querySelector('.text');
     element.addEventListener('click', () => {
         if (gameover) {
-            return; // If the game is already over, do nothing
+            return; 
         }
         if (text.innerText === '') {
             text.innerText = turn;
@@ -76,7 +74,6 @@ restartGame.addEventListener('click', () => {
     turn = "X";
     gameover = false
     document.getElementsByClassName("check")[0].innerText = "Turn for " + turn;
-    // document.body.style.backgroundColor="white";
 
     start.play();
 });
