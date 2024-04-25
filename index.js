@@ -4,9 +4,9 @@ let start = new Audio("start.mp3")
 let tap = new Audio("tap.mp3")
 
 let gameover = false
-let turn = "G"
+let turn = "X"
 const changeTurn = () => {
-    return turn === "G" ? "O" : "G"
+    return turn === "X" ? "O" : "X"
 }
 const checkForWin = () => {
     let text = document.getElementsByClassName('text')
