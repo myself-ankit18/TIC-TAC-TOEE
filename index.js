@@ -27,10 +27,9 @@ const checkForWin = () => {
             winnn.play();
             gameover = true
         }
-
-
     })
 }
+
 const checkForTie = () => {
     let texts = document.querySelectorAll('.text');
     let filledBoxes = 0;
@@ -49,11 +48,13 @@ const checkForTie = () => {
     }
 }
 
-
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
     let text = element.querySelector('.text');
     element.addEventListener('click', () => {
+        if (gameover) {
+            return; // If the game is already over, do nothing
+        }
         if (text.innerText === '') {
             text.innerText = turn;
             tap.play();
@@ -63,10 +64,10 @@ Array.from(boxes).forEach(element => {
                 document.getElementsByClassName("check")[0].innerText = "Turn for " + turn;
             }
             checkForTie();
-
         }
-    })
-})
+    });
+});
+
 restartGame.addEventListener('click', () => {
     let texts = document.querySelectorAll('.text');
     Array.from(texts).forEach(element => {
@@ -78,6 +79,4 @@ restartGame.addEventListener('click', () => {
     // document.body.style.backgroundColor="white";
 
     start.play();
-
-
-})
+});
