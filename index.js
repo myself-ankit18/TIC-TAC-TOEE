@@ -5,6 +5,8 @@ let tap = new Audio("tap.mp3")
 
 let gameover = false
 let turn = "X"
+start.play();
+
 const changeTurn = () => {
     return turn === "X" ? "O" : "X"
 }
